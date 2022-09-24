@@ -21,6 +21,11 @@ const pjSchema = new Schema(
             required: true,
             trim: true,
         },
+        technology: {
+            type: String,
+            unique: false,
+            required: true,
+        },
         description: {
             type: String,
             unique: true,
@@ -33,7 +38,7 @@ const pjSchema = new Schema(
             required: false,
             trim: true,
         },
-        repolink: {
+        repo: {
             type: String,
             unique: true,
             required: true,
@@ -41,9 +46,9 @@ const pjSchema = new Schema(
         }
     },
     {
-        toJSON: {
-            virtuals: true,
-        },
+        // toJSON: {
+        //     virtuals: true,
+        // },
         id: false,
     },
 );
