@@ -47,3 +47,7 @@ const pjSchema = new Schema(
         id: false,
     },
 );
+
+const Project = model('project', pjSchema);
+
+module.exports = Project;
